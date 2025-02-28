@@ -1,14 +1,15 @@
 i
-# Function to add two numbers
-def add_numbers(num1, num2):
-    return num1 + num2
+def calculator(a, b, operation):
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a - b
+    elif operation == "multiply":
+        return a * b
+    elif operation == "divide":
+        return a / b if b != 0 else "Cannot divide by zero"
+    else:
+        return "Invalid operation"
 
-# Input: two numbers
-number1 = float(input("Enter the first number: "))
-number2 = float(input("Enter the second number: "))
+print(calculator(10, 5, "add"))
 
-# Calculate the sum
-sum_result = add_numbers(number1, number2)
-
-# Output the result
-print(f"The sum of {number1} and {number2} is {sum_result}")
